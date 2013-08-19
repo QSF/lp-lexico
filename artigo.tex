@@ -1,0 +1,35 @@
+\documentclass[a4paper]{article}
+
+%deixa no padr?o brasileiro, traduzindo as se??es, possibilitando caracteres e hifen
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%estilo de header
+\pagestyle{headings}
+
+%pacote para inserir imagem
+\usepackage{graphicx}
+
+%t?tulo
+\title{Ferramentas didáticas de análise léxica}
+\author{Gustavo Scaloni Vendramini    \\ 
+        Guilherme José Henrique       \\
+        Sean Carlisto de Alvarenga    \\
+        Vinícius Fernandes de Jesus}
+\date{\today}
+
+%pacote que coloca links no table of contents e monta o índice lateral, de acordo com as se??es do documento.
+\usepackage[pdftex]{hyperref}
+
+%documento em s?
+\begin{document}
+\maketitle
+\tableofcontents
+\include{./abstract/abstract}
+\include{./resumo/resumo}
+\include{./sintelo/sintelo}
+
+% \bibliographystyle{plain} % especifica o estilo como as refer?ncias s?o formatadas
+% \bibliography{bibliografia} % especifica o arquivo que cont?m todas as refer?ncias catalogadas, de acordo com a sintaxe de um arquivo .bib.
+\end{document}
