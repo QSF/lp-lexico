@@ -11,12 +11,14 @@ Para que possamos realizar a análise léxica, primeiramente devemos informar ao
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[scale=0.28]{imgs/sintelo-inicial-ed}
-	\caption{Tela inicial do sintelo}
+	\caption{Tela inicial do sintelo.}
 	\label{sintelo-inicial}
 \end{figure}
 
 A notação utilizada para representar as expressões regulares são descritas em \cite{sintelo} ou no manual da ferramenta, que pode ser acessado através do menu ``Ajuda'', item ``Manual'' e seção ``Especificações Léxicas''. Desta forma este artigo não explicará a notação.
 
+\subsection{Exemplo} % (fold)
+\label{sub:exemplo}
 Para exibir a análise léxica, o exemplo de operações aritméticas de \cite{Sebesta201201} será adaptado. Esse exemplo reconhece operações aritméticas que podem conter números (inteiros e/ou reias), identificadores (variáveis), operações binárias e também parêntesis; ignorando espaços em branco, quebra de linha e tabulação.
 
 A seguir, a especificação dos tokens que deve ser passada para o sintelo:
@@ -30,5 +32,43 @@ binop:"+" | \- | \*|"/"
 :[\s\n\t]+
 \end{verbatim}
 
+Com os tokens da linguagem especificados, basta realizar a simulação da análise léxica. Para fazer isso, primeiramente vá ao menu ``Ferramentas'', item ``Léxico'', opção ``Simular''. 
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.28]{imgs/sintelo-lexico-inicial}
+	\caption{Tela inicial da simulação da análise léxica.}
+	\label{sintelo-lexico-inicial}
+\end{figure}
+
+A seguir, é necessário informar a entrada da linguagem, no local informado pela figura ~\ref{sintelo-lexico-inicial}. Como exemplo de entrada para o analizador léxico, temos a seguinte:
+\begin{verbatim}
+1/n + 1/(2*n) + 1/(3*n)
+(a*a) + 2*a*b + b*b
+a*a - b*b
+\end{verbatim}
+
+Para efetuar a simulação basta clicar no botão ``Simular''. A figura ~\ref{sintelo-lexico-ok} exibe o resultado da simulação. Note que a ferramenta exibe os tokens reconhecidos e seus respectivos lugares no código de entrada.
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.28]{imgs/sintelo-lexico-ok}
+	\caption{Tela após a simulação da análise léxica.}
+	\label{sintelo-lexico-ok}
+\end{figure}
+
+Agora considere a seguinte entrada:
+\begin{verbatim}
+a^a - b*b
+\end{verbatim}
+
+Como a operação \^~ não está definida na linguagem em questão, um erro será obtido com a simulação dessa entrada, conforme ilustrado na figura ~\ref{sintelo-lexico-erro}. 
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.28]{imgs/sintelo-lexico-erro}
+	\caption{Tela de erro léxico.}
+	\label{sintelo-lexico-erro}
+\end{figure}
+% subsection exemplo (end)
 
 % section sintelo (end)
