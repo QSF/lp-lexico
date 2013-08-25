@@ -1,0 +1,19 @@
+\section{Verto} % (fold)
+\label{sec:verto}
+
+O Compilador didático Verto é uma aplicação para o suporte pedagógico nas disciplinas de compiladores.
+Foi desenvolvido no Centro universitário Feevale.
+
+
+ferramenta
+para apoio pedagógico na disciplina de Compiladores do Centro Universitário Feevale.
+A disciplina de Compiladores no contexto de um curso de graduação, objetiva levar o
+aluno a perceber concretamente as diversas etapas envolvidas no processo de
+compilação, elaborando, ao final da disciplina, o projeto de um compilador funcional
+para uma gramática simples. O Compilador Verto foi escrito na linguagem de
+programação Java e elaborado sob os termos da licença GPL (GNU General Public
+License). Com este ambiente visamos proporcionar aos estudantes de Compiladores um
+projeto aberto e documentado para utilização em seu aprendizado, apoiando a
+compreensão das fases de um compilador, sobretudo as fases de síntese de código
+intermediário e geração de código-objeto, promovendo uma aprendizagem
+contextualizada.
